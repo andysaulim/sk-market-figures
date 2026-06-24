@@ -1,49 +1,32 @@
-# sk-market-figures
+# South Korea's Market Boom — Figures
 
-Figure package for **"South Korea's Market Boom—and the Bubble Beneath It,"**
-Evan Ramstad, CSIS Korea Chair Platform, June 2026.
+Four CSIS Korea Chair figures for the Platform piece by Evan Ramstad (June 2026),
+on the KOSPI's 2026 surge.
 
-Live gallery: <https://andysaulim.github.io/sk-market-figures/>
+**Live:** https://andysaulim.github.io/sk-market-figures/
 
-## The four figures
+| # | Figure | Embeddable | PNG |
+|---|--------|-----------|-----|
+| 1 | The KOSPI nearly tripled in a year | `embed_fig1.html` | `img/fig1_kospi.png` |
+| 2 | Two companies, five-fold and ten-fold in a year | `embed_fig2.html` | `img/fig2_two_companies.png` |
+| 3 | Two firms, more than half the KOSPI | `embed_fig3.html` | `img/fig3_concentration_donut.png` |
+| 4 | The biggest up days sat right next to the biggest down days | `embed_fig4.html` | `img/fig4_volatility_timeline.png` |
 
-| # | Title | Shows |
-|---|-------|-------|
-| 1 | The KOSPI nearly tripled in a year | Weekly KOSPI, Jun 2025–Jun 2026 (+196%) |
-| 2 | Two companies, five-fold and ten-fold in a year | Samsung ≈5×, SK hynix ≈10× (indexed) |
-| 3 | Two firms, more than half the KOSPI | SK hynix + Samsung >50% of ~880 firms |
-| 4 | The biggest up days sat right next to the biggest down days | 20 largest daily moves of 2026 |
+## Embedding
+Each `embed_figN.html` is self-contained (fonts, logo, data, Chart.js; transparent
+background; hover tooltips). Iframe it:
 
-## Contents
-
+```html
+<iframe src="https://andysaulim.github.io/sk-market-figures/embed_fig1.html"
+        title="Figure 1: The KOSPI nearly tripled in a year"
+        loading="lazy" scrolling="no" style="width:100%;border:0;height:590px"></iframe>
 ```
-index.html            Gallery of all four figures (interactive, hover works), OG meta set
-embed_fig1..4.html    Self-contained, iframe-ready — fonts, data, logo, and Chart.js baked in
-embed_codes.md        Per-figure iframe snippets + the one-time auto-resize listener
-```
+Full code + the one-time auto-resize listener: see `embed_codes.md`.
 
-## Publishing
+## Notes
+- PNGs in `img/` are transparent (drop onto a white page).
+- Figure 1's line is weekly **through June 15**, before the June 23 sell-off
+  (which Figure 4 captures); extend it when KOSPI daily closes are available.
+- Figure 3's split is illustrative of ">50%," not a precise share.
 
-This repo is meant to be served as a **GitHub Pages** site. Enable Pages on the
-default branch (Settings → Pages → Build from branch → root), and the figures
-are available at `https://andysaulim.github.io/sk-market-figures/`.
-
-- **Whole gallery:** link or iframe `index.html`.
-- **Individual figure:** copy the snippet from [`embed_codes.md`](embed_codes.md).
-  Paste the auto-resize listener once per host page so each iframe sizes itself
-  (the inline `height` values are safe fallbacks if the listener is stripped).
-
-## House style (baked into every figure)
-
-- Type: **Synthèse**. Titles black (`#1A1A1A`), one line, "Figure N: …"; subtitle/source gray.
-- Data colors: navy `#002147`, CSIS red `#C8102E`, light gray `#CFD3D8`.
-- Transparent ground, no card or border; Korea Chair lockup bottom-right, source bottom-left.
-
-## Caveats
-
-- **Fig 1** runs weekly through June 15 — it ends on the high and does *not* show the
-  June 23 −10% drop (Fig 4 carries that). Extend with KOSPI daily closes when available.
-- **Fig 3** split is illustrative of ">50%," not a precise share.
-
-Source: Korea Exchange (KRX); company share-price filings; figures as stated in the
-CSIS Korea Chair Platform piece (Ramstad, 2026). Prepared by CSIS Korea Chair.
+Source: Korea Exchange (KRX); company filings; CSIS Korea Chair.
