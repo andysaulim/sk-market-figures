@@ -29,4 +29,4 @@ Full code + the one-time auto-resize listener: see `embed_codes.md`.
   (which Figure 4 captures); extend it when KOSPI daily closes are available.
 - Figure 3's split is illustrative of ">50%," not a precise share.
 
-Source: Korea Exchange (KRX); company filings; CSIS Korea Chair.
+Source: Korea Exchange (KRX); company filings; author's calculations.
